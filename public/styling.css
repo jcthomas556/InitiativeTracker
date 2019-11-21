@@ -1,0 +1,35 @@
+.center{
+    margin:auto;
+  }
+  #banner{
+    letter-spacing: 15px;
+    font-family: 'MedievalSharp', cursive;
+    color: white;
+    
+  }
+  
+  .lists {
+    width: auto;
+    height: auto;
+    border: solid grey 4px;
+    text-align: center;
+    background-color: papayawhip ;
+    }
+  
+  
+  #activePlayersEncounter{
+    display:flex;
+    flex-direction:column-reverse;
+    order: 0;
+    /* order: <number>; */
+  }
+  
+  .paper{
+  background-image: url(https://arthousesouthampton.files.wordpress.com/2013/12/paper-background.jpg) !important ;
+  background-size: cover !important ;
+  
+  }
+  
+  #spanSpacing{
+    float: left;
+  }
