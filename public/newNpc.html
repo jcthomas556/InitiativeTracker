@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Create a new NPC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=MedievalSharp&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styling.css" />
+  <script src="scriptCode.js"></script>
+
+</head>
+<body class="paper">
+
+
+<div class="jumbotron text-center" style="background-color:maroon">
+  <h1 id="banner">D&D Initiative Tracker</h1>
+</div>
+  
+<div class="container">
+  
+ <div class="col-sm-4" ></div>
+    <div class="col-lg-4">
+     <h2 style="text-align:center">New NPC Character</h2>
+    <form action="/submitNPC" method="POST">
+    <div class="form-group">
+      <input type="text" class="form-control" id="fname" autofocus="autofocus" placeholder="First Name" name="fname" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="lname" placeholder="Last Name" name="lname" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="npc_ac" placeholder="AC" name="npc_ac" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="init_bonus" placeholder="Initiative Bonus" name="init_bonus" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="classification" placeholder="classification, Ex. Humanoid, Monstosity" name="classification">
+    </div>
+    
+    <button type="submit" class="btn btn-default btn-block">Submit</button>
+  </form>
+
+
+
+<div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+           
+        </div>
+    </div>
+
+    <div class="col-sm-4" ></div>
+     <br><br>
+     <button onclick="window.location.href='/'" class="btn btn-default btn-block">Home</button>
+
+  
+</div>
+
+</body>
+</html>

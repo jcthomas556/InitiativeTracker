@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Build your DND roster!</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=MedievalSharp&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styling.css" />
+
+</head>
+
+<body class="paper">
+<script src="scriptCode.js"></script>
+
+    <div class="jumbotron text-center" style="background-color:maroon">
+        <h1 id="banner">D&D Initiative Tracker</h1>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <div class="col-lg-4"  >
+            <form action="" method="POST" >
+                <input class="form-control mr-sm-2"  type="text" autofocus="autofocus" placeholder="Search" name="name">
+                <input type="submit" 
+                    style="position: absolute; left: -9999px; width: 1px; height: 1px;"
+                    tabindex="-1" />
+                    <br>
+            </form>
+
+           
+        </div>
+
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-2">
+
+            <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="addPlayers()"> Add </button>
+            <br>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="clearPlayers()">Clear</button>
+            <br>
+            <button onclick="rollInitiative();" type="button" class="btn btn-secondary btn-lg btn-block" >Roll Initiative</button>
+            <br>
+
+        </div>
+
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-4" id="activePlayers"></div>
+    </div>
+
+    <div class="col-lg-11">
+    </div>
+    <div class="col-lg-1">
+        <button onclick="window.location.href='home.html'" type="button" class="btn btn-secondary btn-sm btn-block">Home</button>
+    </div>
+
+    
+</body>
+
+</html>
