@@ -2,7 +2,7 @@ $(() => {
     $('#searchButton').click(() => {
         let search = $('#search').val()
         console.log(search)
-        $.get(`http://www.omdbapi.com/?apikey=827ceaa8&s=${search}`, (data) => {
+        $.get(`https://www.omdbapi.com/?apikey=827ceaa8&s=${search}`, (data) => {
             console.log(data)
             $('#list').empty()
             if (data.Response == 'False') {
