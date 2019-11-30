@@ -2,7 +2,7 @@ $(() => {
     $('#searchButton').click(() => {
         let search = $('#search').val()
         console.log(search)
-        $.get(`http dnd5eapi.co/api/monsters/?name=${search}`, (data) => {
+        $.get(`http://dnd5eapi.co/api/monsters/?name=${search}`, (data) => {
             console.log(data)
             $('#list').empty()
             if (data.Response == 'False') {
