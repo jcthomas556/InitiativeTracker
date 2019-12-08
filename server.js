@@ -1,7 +1,7 @@
 const express = require('express');//install this with npm install express in the terminal, also instal ejs
 var app = express();
 var bodyParser = require('body-parser');
-var rosterPage = require('./rosterPage.js');
+//var rosterPage = require('./rosterPage.js');
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 const {Pool} = require('pg');
 const pool = new Pool({connectionString: process.env.DATABASE_URL || 'postgres://ntwzgxxvnkywoq:ce7468ac2b9ce2c01e407f70d620eac576ac4aa059507db9262fae872ed5932f@ec2-174-129-229-162.compute-1.amazonaws.com:5432/dfb7aff5tskn4d?ssl=true'})
@@ -23,7 +23,24 @@ app.set('port', process.env.PORT || 5000)
         //     res.send(result.rows);
         // })
     })
-    .get('/roster', rosterPage.loadRoster)
+    .get('/rosterView.ejs', function(req, res){
+        const query = {
+            text: 'Select * FROM player_characters'
+        }
+        pool.query(query, function(err, result) {
+            if (err) {
+                console.log("Error in query: ")
+                console.log(err);
+                //TODO send the user to an error page with some links and other info
+            }
+            console.log(result);
+            obj = JSON.parse(JSON.stringify(result));
+            console.log(obj);
+            res.render('rosterView', {data:obj});
+            //res.redirect('/rosterView.ejs');
+            
+        })
+    })    
     .post('/submitPC', function(req, res){
         console.log('req.body.fname');
         console.log(req.body.fname);
